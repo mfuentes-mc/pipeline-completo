@@ -1,6 +1,34 @@
 {
   "version": "21.0.0",
   "artifacts": {
+    "assembly-main-PipelineCompleto-DEV": {
+      "type": "cdk:cloud-assembly",
+      "properties": {
+        "directoryName": "assembly-main-PipelineCompleto-DEV",
+        "displayName": "main-PipelineCompleto/DEV"
+      }
+    },
+    "assembly-main-PipelineCompleto-QA": {
+      "type": "cdk:cloud-assembly",
+      "properties": {
+        "directoryName": "assembly-main-PipelineCompleto-QA",
+        "displayName": "main-PipelineCompleto/QA"
+      }
+    },
+    "assembly-main-PipelineCompleto-STAGING": {
+      "type": "cdk:cloud-assembly",
+      "properties": {
+        "directoryName": "assembly-main-PipelineCompleto-STAGING",
+        "displayName": "main-PipelineCompleto/STAGING"
+      }
+    },
+    "assembly-main-PipelineCompleto-PROD": {
+      "type": "cdk:cloud-assembly",
+      "properties": {
+        "directoryName": "assembly-main-PipelineCompleto-PROD",
+        "displayName": "main-PipelineCompleto/PROD"
+      }
+    },
     "Tree": {
       "type": "cdk:tree",
       "properties": {
@@ -23,7 +51,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::108072982334:role/cdk-hnb659fds-deploy-role-108072982334-us-west-2",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::108072982334:role/cdk-hnb659fds-cfn-exec-role-108072982334-us-west-2",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-108072982334-us-west-2/cc920a4e22056559ad555223b7488793473047b754e7373abf75b63a5ac4d137.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-108072982334-us-west-2/541b823c6078009afcfa36cfa645453deccfe1b83236c1bbf879e899d09385b5.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -93,6 +121,30 @@
             "data": "mainPipelineCompletopipelinePipelineBuildSynthCdkBuildProjectB1A8100A"
           }
         ],
+        "/main-PipelineCompleto/main-PipelineCompleto-pipeline/Pipeline/DEV/PromoteToDEV/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mainPipelineCompletopipelinePipelineDEVPromoteToDEVCodePipelineActionRole8E849A10"
+          }
+        ],
+        "/main-PipelineCompleto/main-PipelineCompleto-pipeline/Pipeline/QA/PromoteToQA/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mainPipelineCompletopipelinePipelineQAPromoteToQACodePipelineActionRole900D1C27"
+          }
+        ],
+        "/main-PipelineCompleto/main-PipelineCompleto-pipeline/Pipeline/STAGING/PromoteToSTAGING/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mainPipelineCompletopipelinePipelineSTAGINGPromoteToSTAGINGCodePipelineActionRole2EA15A02"
+          }
+        ],
+        "/main-PipelineCompleto/main-PipelineCompleto-pipeline/Pipeline/PROD/PromoteToPROD/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mainPipelineCompletopipelinePipelinePRODPromoteToPRODCodePipelineActionRole756C596B"
+          }
+        ],
         "/main-PipelineCompleto/main-PipelineCompleto-pipeline/CodeBuildActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
@@ -121,6 +173,24 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "mainPipelineCompletopipelineUpdatePipelineSelfMutation610A1B84"
+          }
+        ],
+        "/main-PipelineCompleto/main-PipelineCompleto-pipeline/Assets/FileRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mainPipelineCompletopipelineAssetsFileRoleABE3683F"
+          }
+        ],
+        "/main-PipelineCompleto/main-PipelineCompleto-pipeline/Assets/FileRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mainPipelineCompletopipelineAssetsFileRoleDefaultPolicy24F0A7EA"
+          }
+        ],
+        "/main-PipelineCompleto/main-PipelineCompleto-pipeline/Assets/FileAsset1/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mainPipelineCompletopipelineAssetsFileAsset149441A81"
           }
         ],
         "/main-PipelineCompleto/CDKMetadata/Default": [
