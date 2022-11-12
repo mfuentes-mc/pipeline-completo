@@ -1,0 +1,148 @@
+{
+  "version": "21.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "main-PipelineCompleto.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "main-PipelineCompleto.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "main-PipelineCompleto": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://108072982334/us-west-2",
+      "properties": {
+        "templateFile": "main-PipelineCompleto.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::108072982334:role/cdk-hnb659fds-deploy-role-108072982334-us-west-2",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::108072982334:role/cdk-hnb659fds-cfn-exec-role-108072982334-us-west-2",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-108072982334-us-west-2/cc920a4e22056559ad555223b7488793473047b754e7373abf75b63a5ac4d137.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "main-PipelineCompleto.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::108072982334:role/cdk-hnb659fds-lookup-role-108072982334-us-west-2",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "main-PipelineCompleto.assets"
+      ],
+      "metadata": {
+        "/main-PipelineCompleto/main-PipelineCompleto-pipeline/Pipeline/ArtifactsBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mainPipelineCompletopipelinePipelineArtifactsBucket1B3C66E2"
+          }
+        ],
+        "/main-PipelineCompleto/main-PipelineCompleto-pipeline/Pipeline/ArtifactsBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mainPipelineCompletopipelinePipelineArtifactsBucketPolicyE62E7139"
+          }
+        ],
+        "/main-PipelineCompleto/main-PipelineCompleto-pipeline/Pipeline/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mainPipelineCompletopipelinePipelineRole19F95839"
+          }
+        ],
+        "/main-PipelineCompleto/main-PipelineCompleto-pipeline/Pipeline/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mainPipelineCompletopipelinePipelineRoleDefaultPolicy9BCD4229"
+          }
+        ],
+        "/main-PipelineCompleto/main-PipelineCompleto-pipeline/Pipeline/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mainPipelineCompletopipelinePipeline9818F253"
+          }
+        ],
+        "/main-PipelineCompleto/main-PipelineCompleto-pipeline/Pipeline/Source/mfuentes-mc_pipeline-completo/WebhookResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mainPipelineCompletopipelinePipelineSourcemfuentesmcpipelinecompletoWebhookResource9294AD46"
+          }
+        ],
+        "/main-PipelineCompleto/main-PipelineCompleto-pipeline/Pipeline/Build/Synth/CdkBuildProject/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mainPipelineCompletopipelinePipelineBuildSynthCdkBuildProjectRoleC9B11204"
+          }
+        ],
+        "/main-PipelineCompleto/main-PipelineCompleto-pipeline/Pipeline/Build/Synth/CdkBuildProject/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mainPipelineCompletopipelinePipelineBuildSynthCdkBuildProjectRoleDefaultPolicy0B4E6E9C"
+          }
+        ],
+        "/main-PipelineCompleto/main-PipelineCompleto-pipeline/Pipeline/Build/Synth/CdkBuildProject/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mainPipelineCompletopipelinePipelineBuildSynthCdkBuildProjectB1A8100A"
+          }
+        ],
+        "/main-PipelineCompleto/main-PipelineCompleto-pipeline/CodeBuildActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mainPipelineCompletopipelineCodeBuildActionRole89FCFC5E"
+          }
+        ],
+        "/main-PipelineCompleto/main-PipelineCompleto-pipeline/CodeBuildActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mainPipelineCompletopipelineCodeBuildActionRoleDefaultPolicy0F9C2DC1"
+          }
+        ],
+        "/main-PipelineCompleto/main-PipelineCompleto-pipeline/UpdatePipeline/SelfMutation/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mainPipelineCompletopipelineUpdatePipelineSelfMutationRoleD2E0162F"
+          }
+        ],
+        "/main-PipelineCompleto/main-PipelineCompleto-pipeline/UpdatePipeline/SelfMutation/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mainPipelineCompletopipelineUpdatePipelineSelfMutationRoleDefaultPolicy094030ED"
+          }
+        ],
+        "/main-PipelineCompleto/main-PipelineCompleto-pipeline/UpdatePipeline/SelfMutation/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mainPipelineCompletopipelineUpdatePipelineSelfMutation610A1B84"
+          }
+        ],
+        "/main-PipelineCompleto/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/main-PipelineCompleto/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/main-PipelineCompleto/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "main-PipelineCompleto"
+    }
+  }
+}

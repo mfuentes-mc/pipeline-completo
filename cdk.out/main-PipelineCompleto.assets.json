@@ -1,0 +1,20 @@
+{
+  "version": "21.0.0",
+  "files": {
+    "cc920a4e22056559ad555223b7488793473047b754e7373abf75b63a5ac4d137": {
+      "source": {
+        "path": "main-PipelineCompleto.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "108072982334-us-west-2": {
+          "bucketName": "cdk-hnb659fds-assets-108072982334-us-west-2",
+          "objectKey": "cc920a4e22056559ad555223b7488793473047b754e7373abf75b63a5ac4d137.json",
+          "region": "us-west-2",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::108072982334:role/cdk-hnb659fds-file-publishing-role-108072982334-us-west-2"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
