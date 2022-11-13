@@ -376,6 +376,110 @@
          ]
         },
         "RunOrder": 1
+       },
+       {
+        "ActionTypeId": {
+         "Category": "Build",
+         "Owner": "AWS",
+         "Provider": "CodeBuild",
+         "Version": "1"
+        },
+        "Configuration": {
+         "ProjectName": {
+          "Ref": "mainPipelineCompletopipelineAssetsFileAsset298561F96"
+         }
+        },
+        "InputArtifacts": [
+         {
+          "Name": "Synth_Output"
+         }
+        ],
+        "Name": "FileAsset2",
+        "RoleArn": {
+         "Fn::GetAtt": [
+          "mainPipelineCompletopipelineCodeBuildActionRole89FCFC5E",
+          "Arn"
+         ]
+        },
+        "RunOrder": 1
+       },
+       {
+        "ActionTypeId": {
+         "Category": "Build",
+         "Owner": "AWS",
+         "Provider": "CodeBuild",
+         "Version": "1"
+        },
+        "Configuration": {
+         "ProjectName": {
+          "Ref": "mainPipelineCompletopipelineAssetsFileAsset39B392B1F"
+         }
+        },
+        "InputArtifacts": [
+         {
+          "Name": "Synth_Output"
+         }
+        ],
+        "Name": "FileAsset3",
+        "RoleArn": {
+         "Fn::GetAtt": [
+          "mainPipelineCompletopipelineCodeBuildActionRole89FCFC5E",
+          "Arn"
+         ]
+        },
+        "RunOrder": 1
+       },
+       {
+        "ActionTypeId": {
+         "Category": "Build",
+         "Owner": "AWS",
+         "Provider": "CodeBuild",
+         "Version": "1"
+        },
+        "Configuration": {
+         "ProjectName": {
+          "Ref": "mainPipelineCompletopipelineAssetsFileAsset4F9A91225"
+         }
+        },
+        "InputArtifacts": [
+         {
+          "Name": "Synth_Output"
+         }
+        ],
+        "Name": "FileAsset4",
+        "RoleArn": {
+         "Fn::GetAtt": [
+          "mainPipelineCompletopipelineCodeBuildActionRole89FCFC5E",
+          "Arn"
+         ]
+        },
+        "RunOrder": 1
+       },
+       {
+        "ActionTypeId": {
+         "Category": "Build",
+         "Owner": "AWS",
+         "Provider": "CodeBuild",
+         "Version": "1"
+        },
+        "Configuration": {
+         "ProjectName": {
+          "Ref": "mainPipelineCompletopipelineAssetsFileAsset5A011E1E7"
+         }
+        },
+        "InputArtifacts": [
+         {
+          "Name": "Synth_Output"
+         }
+        ],
+        "Name": "FileAsset5",
+        "RoleArn": {
+         "Fn::GetAtt": [
+          "mainPipelineCompletopipelineCodeBuildActionRole89FCFC5E",
+          "Arn"
+         ]
+        },
+        "RunOrder": 1
        }
       ],
       "Name": "Assets"
@@ -1088,6 +1192,30 @@
         },
         {
          "Fn::GetAtt": [
+          "mainPipelineCompletopipelineAssetsFileAsset298561F96",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::GetAtt": [
+          "mainPipelineCompletopipelineAssetsFileAsset39B392B1F",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::GetAtt": [
+          "mainPipelineCompletopipelineAssetsFileAsset4F9A91225",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::GetAtt": [
+          "mainPipelineCompletopipelineAssetsFileAsset5A011E1E7",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::GetAtt": [
           "mainPipelineCompletopipelinePipelineBuildSynthCdkBuildProjectB1A8100A",
           "Arn"
          ]
@@ -1420,7 +1548,7 @@
      ]
     },
     "Source": {
-     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-main-PipelineCompleto-DEV/mainPipelineCompletoDEVmainPipelineCompletoAppStageEC81DCDA.assets.json\\\" --verbose publish \\\"33efe8f1124ae19fa82a8a5ec8587a0db3572f03d851b2f9dfd61518fc66de34:108072982334-us-west-2\\\"\"\n      ]\n    }\n  }\n}",
+     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-main-PipelineCompleto-DEV/mainPipelineCompletoDEVmainPipelineCompletoAppStageEC81DCDA.assets.json\\\" --verbose publish \\\"316a44354e73d88d58c3a91f82bf74c215e034295a83892abe33320a9d3abac1:108072982334-us-west-2\\\"\"\n      ]\n    }\n  }\n}",
      "Type": "CODEPIPELINE"
     },
     "Cache": {
@@ -1431,6 +1559,138 @@
    },
    "Metadata": {
     "aws:cdk:path": "main-PipelineCompleto/main-PipelineCompleto-pipeline/Assets/FileAsset1/Resource"
+   }
+  },
+  "mainPipelineCompletopipelineAssetsFileAsset298561F96": {
+   "Type": "AWS::CodeBuild::Project",
+   "Properties": {
+    "Artifacts": {
+     "Type": "CODEPIPELINE"
+    },
+    "Environment": {
+     "ComputeType": "BUILD_GENERAL1_SMALL",
+     "Image": "aws/codebuild/standard:5.0",
+     "ImagePullCredentialsType": "CODEBUILD",
+     "PrivilegedMode": false,
+     "Type": "LINUX_CONTAINER"
+    },
+    "ServiceRole": {
+     "Fn::GetAtt": [
+      "mainPipelineCompletopipelineAssetsFileRoleABE3683F",
+      "Arn"
+     ]
+    },
+    "Source": {
+     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-main-PipelineCompleto-DEV/mainPipelineCompletoDEVmainPipelineCompletoAppStageEC81DCDA.assets.json\\\" --verbose publish \\\"37ae338e199615c97449e8c74109fcf2f34f207383ba3526e995482bc42d76dd:108072982334-us-west-2\\\"\"\n      ]\n    }\n  }\n}",
+     "Type": "CODEPIPELINE"
+    },
+    "Cache": {
+     "Type": "NO_CACHE"
+    },
+    "Description": "Pipeline step main-PipelineCompleto/Pipeline/Assets/FileAsset2",
+    "EncryptionKey": "alias/aws/s3"
+   },
+   "Metadata": {
+    "aws:cdk:path": "main-PipelineCompleto/main-PipelineCompleto-pipeline/Assets/FileAsset2/Resource"
+   }
+  },
+  "mainPipelineCompletopipelineAssetsFileAsset39B392B1F": {
+   "Type": "AWS::CodeBuild::Project",
+   "Properties": {
+    "Artifacts": {
+     "Type": "CODEPIPELINE"
+    },
+    "Environment": {
+     "ComputeType": "BUILD_GENERAL1_SMALL",
+     "Image": "aws/codebuild/standard:5.0",
+     "ImagePullCredentialsType": "CODEBUILD",
+     "PrivilegedMode": false,
+     "Type": "LINUX_CONTAINER"
+    },
+    "ServiceRole": {
+     "Fn::GetAtt": [
+      "mainPipelineCompletopipelineAssetsFileRoleABE3683F",
+      "Arn"
+     ]
+    },
+    "Source": {
+     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-main-PipelineCompleto-QA/mainPipelineCompletoQAmainPipelineCompletoAppStage083BFD7B.assets.json\\\" --verbose publish \\\"ac8fec9daf4be1031ce5bb6b0d5375e8f151b811f180820ced0a44faa3eaf96a:108072982334-us-west-2\\\"\"\n      ]\n    }\n  }\n}",
+     "Type": "CODEPIPELINE"
+    },
+    "Cache": {
+     "Type": "NO_CACHE"
+    },
+    "Description": "Pipeline step main-PipelineCompleto/Pipeline/Assets/FileAsset3",
+    "EncryptionKey": "alias/aws/s3"
+   },
+   "Metadata": {
+    "aws:cdk:path": "main-PipelineCompleto/main-PipelineCompleto-pipeline/Assets/FileAsset3/Resource"
+   }
+  },
+  "mainPipelineCompletopipelineAssetsFileAsset4F9A91225": {
+   "Type": "AWS::CodeBuild::Project",
+   "Properties": {
+    "Artifacts": {
+     "Type": "CODEPIPELINE"
+    },
+    "Environment": {
+     "ComputeType": "BUILD_GENERAL1_SMALL",
+     "Image": "aws/codebuild/standard:5.0",
+     "ImagePullCredentialsType": "CODEBUILD",
+     "PrivilegedMode": false,
+     "Type": "LINUX_CONTAINER"
+    },
+    "ServiceRole": {
+     "Fn::GetAtt": [
+      "mainPipelineCompletopipelineAssetsFileRoleABE3683F",
+      "Arn"
+     ]
+    },
+    "Source": {
+     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-main-PipelineCompleto-STAGING/mainPipelineCompletoSTAGINGmainPipelineCompletoAppStageC9D8AE00.assets.json\\\" --verbose publish \\\"b9a868729c1545b080520225b4f47df194370d9489521f7df6440e17aaecc46a:108072982334-us-west-2\\\"\"\n      ]\n    }\n  }\n}",
+     "Type": "CODEPIPELINE"
+    },
+    "Cache": {
+     "Type": "NO_CACHE"
+    },
+    "Description": "Pipeline step main-PipelineCompleto/Pipeline/Assets/FileAsset4",
+    "EncryptionKey": "alias/aws/s3"
+   },
+   "Metadata": {
+    "aws:cdk:path": "main-PipelineCompleto/main-PipelineCompleto-pipeline/Assets/FileAsset4/Resource"
+   }
+  },
+  "mainPipelineCompletopipelineAssetsFileAsset5A011E1E7": {
+   "Type": "AWS::CodeBuild::Project",
+   "Properties": {
+    "Artifacts": {
+     "Type": "CODEPIPELINE"
+    },
+    "Environment": {
+     "ComputeType": "BUILD_GENERAL1_SMALL",
+     "Image": "aws/codebuild/standard:5.0",
+     "ImagePullCredentialsType": "CODEBUILD",
+     "PrivilegedMode": false,
+     "Type": "LINUX_CONTAINER"
+    },
+    "ServiceRole": {
+     "Fn::GetAtt": [
+      "mainPipelineCompletopipelineAssetsFileRoleABE3683F",
+      "Arn"
+     ]
+    },
+    "Source": {
+     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-main-PipelineCompleto-PROD/mainPipelineCompletoPRODmainPipelineCompletoAppStage4424569D.assets.json\\\" --verbose publish \\\"957a96792413c40f52c90bb731b4096cb1a4d07427c20bacecc8f9c6ef7832c7:108072982334-us-west-2\\\"\"\n      ]\n    }\n  }\n}",
+     "Type": "CODEPIPELINE"
+    },
+    "Cache": {
+     "Type": "NO_CACHE"
+    },
+    "Description": "Pipeline step main-PipelineCompleto/Pipeline/Assets/FileAsset5",
+    "EncryptionKey": "alias/aws/s3"
+   },
+   "Metadata": {
+    "aws:cdk:path": "main-PipelineCompleto/main-PipelineCompleto-pipeline/Assets/FileAsset5/Resource"
    }
   },
   "CDKMetadata": {

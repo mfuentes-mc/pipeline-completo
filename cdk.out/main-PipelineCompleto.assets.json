@@ -1,7 +1,7 @@
 {
   "version": "21.0.0",
   "files": {
-    "541b823c6078009afcfa36cfa645453deccfe1b83236c1bbf879e899d09385b5": {
+    "97018a665c0d5aa90fa330b89423a0637a6a8025559e99ba7d5d1c34946c223e": {
       "source": {
         "path": "main-PipelineCompleto.template.json",
         "packaging": "file"
@@ -9,7 +9,7 @@
       "destinations": {
         "108072982334-us-west-2": {
           "bucketName": "cdk-hnb659fds-assets-108072982334-us-west-2",
-          "objectKey": "541b823c6078009afcfa36cfa645453deccfe1b83236c1bbf879e899d09385b5.json",
+          "objectKey": "97018a665c0d5aa90fa330b89423a0637a6a8025559e99ba7d5d1c34946c223e.json",
           "region": "us-west-2",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::108072982334:role/cdk-hnb659fds-file-publishing-role-108072982334-us-west-2"
         }
