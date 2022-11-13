@@ -1581,7 +1581,7 @@
      ]
     },
     "Source": {
-     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-main-PipelineCompleto-DEV/mainPipelineCompletoDEVmainPipelineCompletoAppStageEC81DCDA.assets.json\\\" --verbose publish \\\"37ae338e199615c97449e8c74109fcf2f34f207383ba3526e995482bc42d76dd:108072982334-us-west-2\\\"\"\n      ]\n    }\n  }\n}",
+     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-main-PipelineCompleto-DEV/mainPipelineCompletoDEVmainPipelineCompletoAppStageEC81DCDA.assets.json\\\" --verbose publish \\\"a325c81647d5f51ec38389ec2e08e4109e4f9b86d45c34b88f17f02eebdf51e7:108072982334-us-west-2\\\"\"\n      ]\n    }\n  }\n}",
      "Type": "CODEPIPELINE"
     },
     "Cache": {
@@ -1614,7 +1614,7 @@
      ]
     },
     "Source": {
-     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-main-PipelineCompleto-QA/mainPipelineCompletoQAmainPipelineCompletoAppStage083BFD7B.assets.json\\\" --verbose publish \\\"ac8fec9daf4be1031ce5bb6b0d5375e8f151b811f180820ced0a44faa3eaf96a:108072982334-us-west-2\\\"\"\n      ]\n    }\n  }\n}",
+     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-main-PipelineCompleto-QA/mainPipelineCompletoQAmainPipelineCompletoAppStage083BFD7B.assets.json\\\" --verbose publish \\\"3bc49eae32069adf4e323fa22dc7915a449b1e3fb207c68e8bb3410238571e35:108072982334-us-west-2\\\"\"\n      ]\n    }\n  }\n}",
      "Type": "CODEPIPELINE"
     },
     "Cache": {
@@ -1647,7 +1647,7 @@
      ]
     },
     "Source": {
-     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-main-PipelineCompleto-STAGING/mainPipelineCompletoSTAGINGmainPipelineCompletoAppStageC9D8AE00.assets.json\\\" --verbose publish \\\"b9a868729c1545b080520225b4f47df194370d9489521f7df6440e17aaecc46a:108072982334-us-west-2\\\"\"\n      ]\n    }\n  }\n}",
+     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-main-PipelineCompleto-STAGING/mainPipelineCompletoSTAGINGmainPipelineCompletoAppStageC9D8AE00.assets.json\\\" --verbose publish \\\"a13bc3f2dd7a3c3942efb3a7300ed6f48932acf75a8f7a18740ca28e3c413479:108072982334-us-west-2\\\"\"\n      ]\n    }\n  }\n}",
      "Type": "CODEPIPELINE"
     },
     "Cache": {
@@ -1680,7 +1680,7 @@
      ]
     },
     "Source": {
-     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-main-PipelineCompleto-PROD/mainPipelineCompletoPRODmainPipelineCompletoAppStage4424569D.assets.json\\\" --verbose publish \\\"957a96792413c40f52c90bb731b4096cb1a4d07427c20bacecc8f9c6ef7832c7:108072982334-us-west-2\\\"\"\n      ]\n    }\n  }\n}",
+     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-main-PipelineCompleto-PROD/mainPipelineCompletoPRODmainPipelineCompletoAppStage4424569D.assets.json\\\" --verbose publish \\\"ffd1e49f897c06c8dd2cb376194f9be45b5a36519c54124cdc20ff496657aec6:108072982334-us-west-2\\\"\"\n      ]\n    }\n  }\n}",
      "Type": "CODEPIPELINE"
     },
     "Cache": {

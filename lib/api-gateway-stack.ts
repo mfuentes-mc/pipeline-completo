@@ -2,9 +2,9 @@ import { NestedStack, NestedStackProps } from "aws-cdk-lib";
 import { Construct } from "constructs";
 import { Environment } from "../config";
 import { Options } from "../types/options";
-import * as path from 'path';
-import { Function, Runtime, Code } from 'aws-cdk-lib/aws-lambda';
+
 import { LambdaIntegration, RestApi } from "aws-cdk-lib/aws-apigateway";
+import { HelloWorldFunction } from "./hello-world-function";
 
 interface ApiProps extends NestedStackProps {
     options: Options,
@@ -17,15 +17,10 @@ export class ApiGatewayStack extends NestedStack{
     constructor(scope: Construct, stageName: string, props: ApiProps){
         super(scope, stageName, props);
         
-        const helloWorldLambdaFunction=new Function(this,'LambdaFunction',{
-            runtime: Runtime.NODEJS_16_X,
-            handler: 'handler.handler',
-            code: Code.fromAsset(path.join(__dirname,'../src/hello-world','')),
-            environment: {"stageName": stageName, "stage":props?.stageEnvironment}
-        });
+       const helloFunction=new HelloWorldFunction(this,stageName,props);
 
         //Hello Lambda Integration
-        const helloWorldLambdaIntegration = new LambdaIntegration(helloWorldLambdaFunction);
+        const helloWorldLambdaIntegration = new LambdaIntegration(helloFunction.function);
         const helloWorldLambdaResource = this.api.root.addResource('hello');
         helloWorldLambdaResource.addMethod('GET',helloWorldLambdaIntegration);
 
